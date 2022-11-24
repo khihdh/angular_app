@@ -1,0 +1,15 @@
+<form action="" method="get" class="form-example">
+
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+      email<input class="form-control" type="text" id="newAttributeNom" [(ngModel)]="names" name="names" />
+      </div>
+  
+  
+        <textarea  [(ngModel)]="message" name="message" rows="10" cols="60">
+        </textarea>
+  
+    <div>
+    <button (click)="onSave()" value="send">Send</button>
+  </div>
+  </form>

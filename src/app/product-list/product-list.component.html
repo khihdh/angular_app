@@ -1,0 +1,41 @@
+<div class="container">  
+    
+    <h1 *ngIf='showTable'> Product List </h1>  
+    <h1 *ngIf='!showTable'> Details of {{sample.name}} </h1> 
+      
+    <table class="table table-striped" *ngIf='showTable' >  
+      <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>Name</th>   
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let product of products">  
+          <td>{{ product.id }}</td>  
+          <td>{{ product.name }}</td>  
+          <a mat-raised-button (click)='toggleShowTable(); changeSample(product) '>Details</a>  
+        </tr>  
+      </tbody>  
+    </table>  
+
+    <table class="table table-striped" *ngIf='!showTable' >  
+      <thead>  
+          <tr>   
+            <th>Name</th>  
+            <th>Price</th>  
+            <th>In Stock</th>  
+            <th>Constructor</th> 
+            <th>Guaranty</th> 
+          </tr>  
+      </thead>  
+      <tbody>   
+          <td>{{ sample.name }}</td>  
+          <td>{{ sample.prix }}</td>  
+          <td>{{ sample.stock }}</td>
+          <td>{{ sample.constructeur }}</td>
+          <td>{{ sample.Garentie }}</td>
+          <a mat-raised-button (click)='toggleShowTable(); '>Return</a>  
+      </tbody>  
+    </table> 
+  </div>

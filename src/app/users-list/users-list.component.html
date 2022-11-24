@@ -1,0 +1,37 @@
+<div class="container">  
+    
+    <h1 *ngIf='showTable'> User List </h1>  
+    <h1 *ngIf='!showTable'> Details of {{sample.name}} </h1> 
+      
+    <table class="table table-striped" *ngIf='showTable' >  
+      <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>Name</th>   
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let user of users">  
+          <td>{{ user.id }}</td>  
+          <td>{{ user.name }}</td>  
+          <a mat-raised-button (click)='toggleShowTable(); changeSample(user) '>Details</a>  
+        </tr>  
+      </tbody>  
+    </table>  
+
+    <table class="table table-striped" *ngIf='!showTable' >  
+      <thead>  
+          <tr>   
+            <th>Name</th>  
+            <th>Mail</th>  
+            <th>Gender</th>  
+          </tr>  
+      </thead>  
+      <tbody>   
+          <td>{{ sample.name }}</td>  
+          <td>{{ sample.email }}</td>  
+          <td>{{ sample.gender }}</td>
+          <a mat-raised-button (click)='toggleShowTable(); '>Return</a>  
+      </tbody>  
+    </table> 
+  </div>

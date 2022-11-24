@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Iphone8",
+    "prix": "888 $",
+    "stock": "oui",
+    "constructeur": "Apple",
+    "Garentie":"oui"
+  },
+  {
+    "id": 2,
+    "name": "Iphone9",
+    "prix": "988 $",
+    "stock": "oui",
+    "constructeur": "Apple",
+    "Garentie":"oui"
+  },
+  {
+    "id": 3,
+    "name": "Iphone10",
+    "prix": "1088 $",
+    "stock": "oui",
+    "constructeur": "Apple",
+    "Garentie":"non"
+  },
+  {
+    "id": 4,
+    "name": "Iphone11",
+    "prix": "1188 $",
+    "stock": "non",
+    "constructeur": "Apple",
+    "Garentie":"oui"
+  },
+  {
+    "id": 5,
+    "name": "SamsungSLite",
+    "prix": "788 $",
+    "stock": "oui",
+    "constructeur": "Samsung",
+    "Garentie":"oui"
+  }
+]  

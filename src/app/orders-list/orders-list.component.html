@@ -1,0 +1,36 @@
+<div class="container">  
+    
+    <h1 *ngIf='showTable'> Order List </h1>  
+    <h1 *ngIf='!showTable'> Details of order n°{{sample.id}} </h1> 
+      
+    <table class="table table-striped" *ngIf='showTable' >  
+      <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>Number Of Items</th>   
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let user of orders">  
+          <td>{{ user.id }}</td>  
+          <td>{{ user.numberOfItems }}</td>  
+          <a mat-raised-button (click)='toggleShowTable(); changeSample(user) '>Details</a>  
+        </tr>  
+      </tbody>  
+    </table>  
+
+    <table class="table table-striped" *ngIf='!showTable' >  
+      <thead>  
+          <tr>   
+            <th>Id</th>   
+            <th>Content</th>  
+          </tr>  
+      </thead>  
+      <tbody>   
+          <td>{{ sample.id }}</td>    
+          <td>{{ sample.contents }}</td>
+          <a mat-raised-button (click)='toggleShowTable(); '>Return</a>  
+      </tbody>  
+    </table> 
+  </div>
+
